@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% for order in orders %}
+    <h3>{{ order.product.name }}</h3>
+    <img src="{{ order.product.image.url }}" alt="img" style="max-width:300px">
+    <h3>{{ order.quantity }} found in cart</h3>
+
+{% endfor %}
+
+<a href="{% url 'delete-cart' %}">Delete Card</a>
+
+{% endblock %}

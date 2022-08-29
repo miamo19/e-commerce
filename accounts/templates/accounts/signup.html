@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block signup %} {% endblock %}
+{% block content %}
+    <h1>SignUp</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label for="username">User Name</label>
+            <input id="username" type="text" name="username">
+        </p>
+         <p>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="name@gmail.com">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password">
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}
